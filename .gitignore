@@ -1,0 +1,12 @@
+/build/
+/.tools/
+/release-assets/
+*.apk
+*.idsig
+*.keystore
+*.jks
+*.key
+local.properties
+.idea/
+__pycache__/
+*.pyc
