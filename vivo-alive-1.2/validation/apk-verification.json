@@ -1,0 +1,30 @@
+{
+  "app_name": "vivo alive",
+  "package": "com.hyperalive.aod",
+  "version": "1.2-test-upstream1.0.4",
+  "launcher_count": 1,
+  "upstream_tag": "v1.0.4",
+  "upstream_commit": "5671c5202d2f2cfa73e852377a26d42443cce884",
+  "upstream_assets_verified_against_git": 224,
+  "upstream_files_changed": [
+    "app/src/main/AndroidManifest.xml",
+    "app/src/main/java/com/hyperalive/aod/ClockSettings.java",
+    "app/src/main/java/com/hyperalive/aod/EditorActivity.java",
+    "app/src/main/java/com/hyperalive/aod/LspState.java",
+    "app/src/main/java/com/hyperalive/aod/MainActivity.java",
+    "app/src/main/java/com/hyperalive/aod/XposedInit.java",
+    "app/src/main/java/com/hyperalive/aod/hook/StateCoordinator.java",
+    "app/src/main/java/com/hyperalive/aod/hook/SystemServerHook.java",
+    "app/src/main/java/com/hyperalive/aod/hook/ViewTreeSweeper.java",
+    "app/src/main/res/values/arrays.xml",
+    "app/src/main/res/values/strings.xml"
+  ],
+  "runtime_class_count": 439,
+  "same_signing_certificate_as_previous_vivo_alive": true,
+  "restart_commands_in_dex": false,
+  "jvm_fakes_or_tests_packaged": false,
+  "single_module_entry": "com.hyperalive.aod.XposedInit",
+  "apk_sha256": "05bb4abfa286390e31eba5cca200243613f633b66cb19dffd6d23b51c93be0aa",
+  "device_connected_or_modified": false,
+  "device_tested": false
+}

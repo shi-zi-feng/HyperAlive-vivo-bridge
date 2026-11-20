@@ -1,0 +1,11 @@
+{
+  "app_name": "vivo alive",
+  "package": "com.hyperalive.aod",
+  "version_name": "1.2-test-upstream1.0.4",
+  "version_code": "2026112001",
+  "launcher_count": 1,
+  "asset_count": 225,
+  "sha256": "05bb4abfa286390e31eba5cca200243613f633b66cb19dffd6d23b51c93be0aa",
+  "size_bytes": 33343039,
+  "device_tested": false
+}

@@ -10,3 +10,6 @@ local.properties
 .idea/
 __pycache__/
 *.pyc
+/vivo-alive-1.2/build/
+/vivo-alive-1.2/app/src/main/assets/*
+!/vivo-alive-1.2/app/src/main/assets/xposed_init

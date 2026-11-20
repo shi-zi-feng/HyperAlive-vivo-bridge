@@ -1,0 +1,438 @@
+--- upstream/app/src/main/AndroidManifest.xml
++++ vivo-alive/app/src/main/AndroidManifest.xml
+@@ -1,8 +1,8 @@
+ <?xml version="1.0" encoding="utf-8"?>
+ <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+     package="com.hyperalive.aod"
+-    android:versionCode="20261116"
+-    android:versionName="1.0.4">
++    android:versionCode="2026112001"
++    android:versionName="1.2-test-upstream1.0.4">
+ 
+     <uses-sdk android:minSdkVersion="29" android:targetSdkVersion="35" />
+ 
+@@ -28,10 +28,12 @@
+             <data android:mimeType="image/*" />
+         </intent>
+         <package android:name="com.miui.gallery" />
++        <package android:name="com.vivo.nightpearl" />
+     </queries>
+ 
+     <application
+         android:name=".QihangApp"
++        android:icon="@mipmap/ic_launcher"
+         android:allowBackup="false"
+         android:label="@string/app_name"
+         android:directBootAware="true">
+--- upstream/app/src/main/java/com/hyperalive/aod/ClockSettings.java
++++ vivo-alive/app/src/main/java/com/hyperalive/aod/ClockSettings.java
+@@ -118,7 +118,7 @@
+             try {
+                 Context safe = getSafeContext(ctx);
+                 SharedPreferences sp = (safe != null ? safe : ctx).getSharedPreferences(PREF_NAME, Context.MODE_PRIVATE);
+-                boolean defEnabled = sp.getBoolean(KEY_CLOCK_ENABLED, false);
++                boolean defEnabled = sp.getBoolean(KEY_CLOCK_ENABLED, com.qihang.vivobridge.VivoBridge.isVivo());
+                 int defStyle = sp.getInt(KEY_STYLE, STYLE_DOUBLE_STACK);
+                 int defColor = sp.getInt(KEY_COLOR, 0xFFFFFFFF);
+                 float defScale = sp.getFloat(KEY_SCALE, 1.0f);
+--- upstream/app/src/main/java/com/hyperalive/aod/EditorActivity.java
++++ vivo-alive/app/src/main/java/com/hyperalive/aod/EditorActivity.java
+@@ -2399,24 +2399,10 @@
+ 
+                                     @Override
+                                     public void syncAliveScope(Context ctx, String wall) {
++                                        // Scope selection stays under the user's control in this vivo build.
++                                        // Applying a wallpaper never enables modules or rewrites the LSPosed DB.
+                                         if (wall != null && wall.startsWith(ALIVE_PKG + "/")) {
+-                                            int userId = android.os.Process.myUid() / 100000;
+-                                            String db = Root.appProcess(ctx, "com.hyperalive.aod.root.LspDb",
+-                                                    "-get", ctx.getPackageName(), String.valueOf(userId));
+-                                            int enabledFlag = LspState.parseEnabledFlag(db);
+-                                            boolean hasAliveScope = LspState.hasScopeToken(db, ALIVE_PKG);
+-                                            if (enabledFlag == 0) {
+-                                                append("⓪ 检测到 LSPosed 模块已停用，跳过作用域同步（保持停用状态）");
+-                                            } else if (enabledFlag == 1 && !hasAliveScope) {
+-                                                append("⓪ 同步 LSPosed 作用域加入 " + ALIVE_PKG);
+-                                                Root.lsposedSync(ctx,
+-                                                        new String[]{"system", "com.android.systemui",
+-                                                                "miui.systemui.plugin", "com.miui.aod",
+-                                                                "com.android.thememanager", "com.hyperalive.aod",
+-                                                                ALIVE_PKG});
+-                                            } else if (enabledFlag < 0 || !hasAliveScope) {
+-                                                append("⓪ LSPosed 未就绪，跳过作用域同步");
+-                                            }
++                                            append("外部 Alive 壁纸的作用域请在框架管理器中手动配置");
+                                         }
+                                     }
+ 
+--- upstream/app/src/main/java/com/hyperalive/aod/LspState.java
++++ vivo-alive/app/src/main/java/com/hyperalive/aod/LspState.java
+@@ -81,7 +81,10 @@
+                 return State.DISABLED;
+             }
+             if (enabled == 1) {
+-                boolean inScope = hasRequiredCoreScopes(db);
++                boolean inScope = hasRequiredCoreScopes(db)
++                        && (!com.qihang.vivobridge.VivoBridge.isVivo()
++                            || (hasScopeToken(db, "com.vivo.nightpearl")
++                                && hasScopeToken(db, "com.hyperalive.aod")));
+                 String lspdOut = Root.su("ps -A | grep -c ' lspd$'", 8000);
+                 boolean lspd = isPositiveProcessCount(lspdOut);
+                 if (lspd && inScope) {
+--- upstream/app/src/main/java/com/hyperalive/aod/MainActivity.java
++++ vivo-alive/app/src/main/java/com/hyperalive/aod/MainActivity.java
+@@ -241,7 +241,7 @@
+     }
+ 
+     private void buildUi() {
+-        page("桌面、壁纸和个性化", null, this::createThreeDotsButton);
++        page("vivo alive", null, this::createThreeDotsButton);
+         col.setPadding(ui.dp(16), ui.dp(52), ui.dp(16), ui.dp(40));
+ 
+         // ---- 状态胶囊芯片 ----
+@@ -470,19 +470,17 @@
+         });
+     }
+ 
+-    /** 更多菜单：重启作用域 / 恢复应用前壁纸 / 日志。 */
++    /** 更多菜单：恢复应用前壁纸 / 日志。框架加载由使用者在框架管理器中控制。 */
+     private void showMoreMenuDialog() {
+-        final String[] items = new String[]{"重启作用域", "恢复应用前壁纸", "日志"};
++        final String[] items = new String[]{"恢复应用前壁纸", "日志"};
+         boolean isNight = ui.night;
+         int theme = isNight ? AlertDialog.THEME_DEVICE_DEFAULT_DARK : AlertDialog.THEME_DEVICE_DEFAULT_LIGHT;
+         AlertDialog.Builder builder = new AlertDialog.Builder(this, theme);
+         builder.setTitle("更多操作");
+         builder.setItems(items, (dialog, which) -> {
+             if (which == 0) {
+-                showRestartScopeDialog();
++                confirmRestorePreModuleWallpaper();
+             } else if (which == 1) {
+-                confirmRestorePreModuleWallpaper();
+-            } else if (which == 2) {
+                 showDiagLogDialog();
+             }
+         });
+@@ -715,90 +713,4 @@
+         dialog.show();
+     }
+ 
+-    /** 弹出重启作用域对话框（模块在 LSPosed 中申请的各作用域，支持多选）。 */
+-    private void showRestartScopeDialog() {
+-        final String[] displayItems = new String[]{
+-                "系统界面",
+-                "系统框架",
+-                "熄屏与锁屏编辑",
+-                "系统界面组件"
+-        };
+-        final boolean[] checked = new boolean[]{true, false, false, false};
+-
+-        boolean isNight = ui.night;
+-        int theme = isNight ? AlertDialog.THEME_DEVICE_DEFAULT_DARK : AlertDialog.THEME_DEVICE_DEFAULT_LIGHT;
+-        AlertDialog.Builder builder = new AlertDialog.Builder(this, theme);
+-        builder.setTitle("重启作用域");
+-        builder.setMultiChoiceItems(displayItems, checked, (dialog, which, isChecked) -> {
+-            checked[which] = isChecked;
+-        });
+-        builder.setNegativeButton("取消", null);
+-        builder.setPositiveButton("确定", (dialog, which) -> {
+-            doRestartScopes(checked);
+-        });
+-        AlertDialog dialog = builder.create();
+-        applyHyperOsDialogStyle(dialog, ui.accentBlue());
+-        dialog.show();
+-    }
+-
+-    private volatile boolean mRestartOpInProgress = false;
+-
+-    /** 执行重启所选作用域（支持多选，后台探测 Root 避免阻塞主线程）。 */
+-    private void doRestartScopes(boolean[] checked) {
+-        if (mRestartOpInProgress) {
+-            toast("正在重启作用域，请稍候…");
+-            return;
+-        }
+-        final String[] names = new String[]{"系统界面", "系统框架", "熄屏与锁屏编辑", "系统界面组件"};
+-        java.util.List<String> selectedNames = new java.util.ArrayList<>();
+-        for (int i = 0; i < checked.length; i++) {
+-            if (checked[i]) {
+-                selectedNames.add(names[i]);
+-            }
+-        }
+-        if (selectedNames.isEmpty()) {
+-            toast("请至少选择一个作用域");
+-            return;
+-        }
+-        final boolean[] snapshot = checked.clone();
+-        final String summary = String.join("、", selectedNames);
+-        mRestartOpInProgress = true;
+-        toast(snapshot[1] ? "正在重启系统框架…" : ("正在重启 " + summary + "…"));
+-
+-        new Thread(() -> {
+-            try {
+-                if (!Root.hasRoot()) {
+-                    ModuleDiagLog.record(MainActivity.this, "重启作用域失败：未获取 ROOT 权限 (" + summary + ")");
+-                    runOnUiThread(() -> {
+-                        if (!isFinishing() && !isDestroyed()) {
+-                            toast("未获取 ROOT 权限，无法重启作用域");
+-                        }
+-                    });
+-                    return;
+-                }
+-                ModuleDiagLog.record(MainActivity.this, "重启作用域：" + summary);
+-                if (snapshot[1]) {
+-                    Root.su("setprop ctl.restart zygote", 10000);
+-                    return;
+-                }
+-                if (snapshot[2]) {
+-                    Root.su("am force-stop com.miui.aod", 5000);
+-                    Root.su("pkill -9 -f com.miui.aod", 5000);
+-                }
+-                if (snapshot[3]) {
+-                    Root.su("pkill -9 -f miui.systemui.plugin", 5000);
+-                }
+-                if (snapshot[0] || snapshot[3]) {
+-                    Root.su("pkill -9 -f com.android.systemui", 5000);
+-                }
+-                runOnUiThread(() -> {
+-                    if (!isFinishing() && !isDestroyed()) {
+-                        toast("已重启 " + summary);
+-                    }
+-                });
+-            } finally {
+-                mRestartOpInProgress = false;
+-            }
+-        }, "qihang-restart-scope").start();
+-    }
+ }
+--- upstream/app/src/main/java/com/hyperalive/aod/XposedInit.java
++++ vivo-alive/app/src/main/java/com/hyperalive/aod/XposedInit.java
+@@ -25,6 +25,7 @@
+     @Override
+     public void handleLoadPackage(XC_LoadPackage.LoadPackageParam lp) {
+         if (lp == null || lp.packageName == null) return;
++        new com.qihang.vivobridge.VivoBridge().handleLoadPackage(lp);
+         HookUtils.log("handleLoadPackage: pkg=" + lp.packageName + " proc=" + lp.processName);
+ 
+         try {
+--- upstream/app/src/main/java/com/hyperalive/aod/hook/StateCoordinator.java
++++ vivo-alive/app/src/main/java/com/hyperalive/aod/hook/StateCoordinator.java
+@@ -808,16 +808,19 @@
+         try {
+             Context c = (ctx != null) ? ctx : (sContext != null ? sContext : systemContext());
+             if (c != null) {
+-                int val = android.provider.Settings.Secure.getInt(
+-                        c.getContentResolver(), "doze_always_on", 1);
++                int val = com.qihang.vivobridge.VivoBridge.isVivo()
++                        ? android.provider.Settings.System.getInt(c.getContentResolver(), "screen_off_remind", 0)
++                        : android.provider.Settings.Secure.getInt(c.getContentResolver(), "doze_always_on", 1);
+                 sCachedAodEnabled = val;
+                 return val == 1;
+             }
+         } catch (Throwable ignored) {}
+-        return sCachedAodEnabled != 0;
++        return com.qihang.vivobridge.VivoBridge.isVivo()
++                ? sCachedAodEnabled == 1 : sCachedAodEnabled != 0;
+     }
+ 
+     public static boolean isFullScreenAod(Context ctx) {
++        if (com.qihang.vivobridge.VivoBridge.isVivo()) return false;
+         try {
+             Context c = (ctx != null) ? ctx : (sContext != null ? sContext : systemContext());
+             if (c != null) {
+--- upstream/app/src/main/java/com/hyperalive/aod/hook/SystemServerHook.java
++++ vivo-alive/app/src/main/java/com/hyperalive/aod/hook/SystemServerHook.java
+@@ -164,47 +164,51 @@
+             }
+         });
+ 
+-        // 1.4 拦截 DisplayPowerController / DisplayPowerState.setScreenState：熄屏进入 AOD 瞬间（1.5s 过渡窗口内）
+-        //     仅在 HyperAlive 实际持有锁屏壁纸且开启 AOD 时生效，绝不做同步 Binder，仅桌面命中也不介入原生 AOD。
+-        XC_MethodHook screenStateHook = new XC_MethodHook() {
+-            @Override
+-            protected void beforeHookedMethod(MethodHookParam param) {
+-                if (param.args != null && param.args.length >= 1) {
+-                    Object stateObj = param.args[0];
+-                    if (stateObj instanceof Integer) {
+-                        int state = (Integer) stateObj;
+-                        if (NativeOnAodRampCoordinator.handleSetScreenState(param, state)) {
+-                            return;
+-                        }
+-                        if (!StateCoordinator.isAodPolicyActiveFast()) return;
+-                        long elapsed = SystemClock.uptimeMillis() - StateCoordinator.sSleepAtMs;
+-                        if (state == 1 && StateCoordinator.sAsleep && elapsed >= 0 && elapsed < 1500L) {
+-                            HookUtils.log(param.thisObject.getClass().getSimpleName() + ".setScreenState: 拦截熄屏初态 STATE_OFF(1) -> 强制重定向为 STATE_DOZE(3) (elapsed=" + elapsed + "ms)");
+-                            param.args[0] = 3; // Display.STATE_DOZE
+-                            StateCoordinator.ensureQihangThawed();
+-                        }
+-                    }
+-                }
+-            }
+-        };
+-        HookUtils.hookAll(cl, "com.android.server.display.DisplayPowerController", "setScreenState", screenStateHook);
+-        HookUtils.hookAll(cl, "com.android.server.display.DisplayPowerControllerImpl", "setScreenState", screenStateHook);
+-        HookUtils.hookAll(cl, "com.android.server.display.DisplayPowerState", "setScreenState", screenStateHook);
+-        HookUtils.hookAll(cl, "com.android.server.display.DisplayPowerState", "prepareColorFade", new XC_MethodHook() {
+-            @Override
+-            protected void beforeHookedMethod(MethodHookParam param) {
+-                if (NativeOnAodRampCoordinator.handlePrepareColorFade(param)) {
+-                    return;
+-                }
+-                if (!StateCoordinator.isAodPolicyActiveFast()) return;
+-                long elapsed = SystemClock.uptimeMillis() - StateCoordinator.sSleepAtMs;
+-                if (StateCoordinator.sAsleep && elapsed >= 0 && elapsed < 1500L) {
+-                    param.setResult(Boolean.FALSE);
+-                }
+-            }
+-        });
+-
+-        NativeOnAodRampCoordinator.install(cl);
++        if (!com.qihang.vivobridge.VivoBridge.isVivo()) {
++            // 1.4 拦截 DisplayPowerController / DisplayPowerState.setScreenState：熄屏进入 AOD 瞬间（1.5s 过渡窗口内）
++            //     仅在 HyperAlive 实际持有锁屏壁纸且开启 AOD 时生效，绝不做同步 Binder，仅桌面命中也不介入原生 AOD。
++            XC_MethodHook screenStateHook = new XC_MethodHook() {
++                @Override
++                protected void beforeHookedMethod(MethodHookParam param) {
++                    if (param.args != null && param.args.length >= 1) {
++                        Object stateObj = param.args[0];
++                        if (stateObj instanceof Integer) {
++                            int state = (Integer) stateObj;
++                            if (NativeOnAodRampCoordinator.handleSetScreenState(param, state)) {
++                                return;
++                            }
++                            if (!StateCoordinator.isAodPolicyActiveFast()) return;
++                            long elapsed = SystemClock.uptimeMillis() - StateCoordinator.sSleepAtMs;
++                            if (state == 1 && StateCoordinator.sAsleep && elapsed >= 0 && elapsed < 1500L) {
++                                HookUtils.log(param.thisObject.getClass().getSimpleName() + ".setScreenState: 拦截熄屏初态 STATE_OFF(1) -> 强制重定向为 STATE_DOZE(3) (elapsed=" + elapsed + "ms)");
++                                param.args[0] = 3; // Display.STATE_DOZE
++                                StateCoordinator.ensureQihangThawed();
++                            }
++                        }
++                    }
++                }
++            };
++            HookUtils.hookAll(cl, "com.android.server.display.DisplayPowerController", "setScreenState", screenStateHook);
++            HookUtils.hookAll(cl, "com.android.server.display.DisplayPowerControllerImpl", "setScreenState", screenStateHook);
++            HookUtils.hookAll(cl, "com.android.server.display.DisplayPowerState", "setScreenState", screenStateHook);
++            HookUtils.hookAll(cl, "com.android.server.display.DisplayPowerState", "prepareColorFade", new XC_MethodHook() {
++                @Override
++                protected void beforeHookedMethod(MethodHookParam param) {
++                    if (NativeOnAodRampCoordinator.handlePrepareColorFade(param)) {
++                        return;
++                    }
++                    if (!StateCoordinator.isAodPolicyActiveFast()) return;
++                    long elapsed = SystemClock.uptimeMillis() - StateCoordinator.sSleepAtMs;
++                    if (StateCoordinator.sAsleep && elapsed >= 0 && elapsed < 1500L) {
++                        param.setResult(Boolean.FALSE);
++                    }
++                }
++            });
++
++            NativeOnAodRampCoordinator.install(cl);
++        } else {
++            HookUtils.log("vivo: native AOD owns display state, fade and brightness");
++        }
+ 
+         HookUtils.log("system_server hooks 安装完成");
+     }
+@@ -279,7 +283,7 @@
+                 int next = (Integer) param.args[0];
+                 Object groupId = HookUtils.getField(param.thisObject, "mGroupId");
+                 if (Integer.valueOf(0).equals(groupId) && next == 1) {
+-                    NativeOnAodRampCoordinator.onPowerWakeSignal("PowerGroup_awake");
++                    if (!com.qihang.vivobridge.VivoBridge.isVivo()) NativeOnAodRampCoordinator.onPowerWakeSignal("PowerGroup_awake");
+                     return;
+                 }
+                 if (!StateCoordinator.isLockWallpaperActiveFast()) return;
+@@ -288,7 +292,7 @@
+                 if (Integer.valueOf(0).equals(groupId)
+                         && (Integer.valueOf(1).equals(previous) || Integer.valueOf(2).equals(previous))) {
+                     StateCoordinator.onSleepIntent("PowerGroup reason=" + param.args[3]);
+-                    NativeOnAodRampCoordinator.onPowerSleepSignal("PowerGroup");
++                    if (!com.qihang.vivobridge.VivoBridge.isVivo()) NativeOnAodRampCoordinator.onPowerSleepSignal("PowerGroup");
+                 }
+             }
+         }, int.class, long.class, int.class, int.class, int.class, String.class, String.class);
+@@ -300,12 +304,12 @@
+             protected void beforeHookedMethod(MethodHookParam p) {
+                 String n = p.method.getName();
+                 if (n.startsWith("wakeUp") || n.startsWith("wakePowerGroup")) {
+-                    NativeOnAodRampCoordinator.onPowerWakeSignal(n);
++                    if (!com.qihang.vivobridge.VivoBridge.isVivo()) NativeOnAodRampCoordinator.onPowerWakeSignal(n);
+                 }
+                 if (!StateCoordinator.isLockWallpaperActiveFast()) return;
+                 if (n.startsWith("goToSleep")) {
+                     StateCoordinator.onSleepIntent("goToSleep");
+-                    NativeOnAodRampCoordinator.onPowerSleepSignal("goToSleep");
++                    if (!com.qihang.vivobridge.VivoBridge.isVivo()) NativeOnAodRampCoordinator.onPowerSleepSignal("goToSleep");
+                 } else if (n.startsWith("wakeUp") || n.startsWith("wakePowerGroup")) {
+                     boolean isBiometric = false;
+                     if (p.args != null) {
+@@ -326,11 +330,11 @@
+                     if (isBiometric) {
+                         HookUtils.log("电源前馈：指纹唤醒 (BIOMETRIC) → 广播 mode=2 (HOME)");
+                         StateCoordinator.onBiometricWakeIntent();
+-                        NativeOnAodRampCoordinator.onPowerWakeSignal("biometric");
++                        if (!com.qihang.vivobridge.VivoBridge.isVivo()) NativeOnAodRampCoordinator.onPowerWakeSignal("biometric");
+                     } else {
+                         HookUtils.log("电源前馈：正常唤醒 (wakeUp) → 广播 mode=1 (LOCK)");
+                         StateCoordinator.onWakeIntent();
+-                        NativeOnAodRampCoordinator.onPowerWakeSignal("wakeUp");
++                        if (!com.qihang.vivobridge.VivoBridge.isVivo()) NativeOnAodRampCoordinator.onPowerWakeSignal("wakeUp");
+                     }
+                 }
+             }
+--- upstream/app/src/main/java/com/hyperalive/aod/hook/ViewTreeSweeper.java
++++ vivo-alive/app/src/main/java/com/hyperalive/aod/hook/ViewTreeSweeper.java
+@@ -245,6 +245,8 @@
+             boolean fullAod = StateCoordinator.isFullScreenAod(ctx);
+             boolean lockScene = isLockScene(ctx);
+             boolean useCustomAod = aodOn && !fullAod && s.customAod;
++            boolean vivo = com.qihang.vivobridge.VivoBridge.isVivo();
++            useCustomAod &= !(vivo && com.qihang.vivobridge.VivoBridge.hasNativeAodHost());
+             boolean suppressHostBg = AodHostBackgroundTracker.shouldSuppressAodHostBg(
+                     true, aodOn, fullAod, sleeping);
+             if (suppressHostBg
+@@ -265,12 +267,14 @@
+             if (sleeping) {
+                 if (enteringSleep) {
+                     s.bridgeSleepEpoch = sleepEpoch;
+-                    s.bridgeSleepPending = useCustomAod || (s.customLock && aodOn && !fullAod);
++                    s.bridgeSleepPending = useCustomAod || (!vivo && s.customLock && aodOn && !fullAod);
+                     s.bridgeLockPending = false;
+                 }
+                 if (!useCustomAod && (!s.customLock || !aodOn || fullAod)) {
+                     s.bridgeSleepPending = false;
+                 }
++                if (vivo && !useCustomAod) s.bridgeSleepPending = false;
++                if (vivo && useCustomAod && !visibleContent(s.aodClock)) s.bridgeSleepPending = true;
+             } else {
+                 s.bridgeSleepPending = false;
+                 if (enteringLock) {
+--- upstream/app/src/main/res/values/arrays.xml
++++ vivo-alive/app/src/main/res/values/arrays.xml
+@@ -1,12 +1,9 @@
+ <?xml version="1.0" encoding="utf-8"?>
+ <resources>
+-    <!-- LSPosed 推荐作用域：系统框架(xposedminversion<100 时需写 android 由 LSPosed 映射为 system)、系统界面、系统界面组件、熄屏与锁屏编辑、模块自身 -->
+     <string-array name="xposed_scope" translatable="false">
+         <item>android</item>
+         <item>com.android.systemui</item>
+-        <item>miui.systemui.plugin</item>
+-        <item>com.miui.aod</item>
+-        <item>com.android.thememanager</item>
++        <item>com.vivo.nightpearl</item>
+         <item>com.hyperalive.aod</item>
+     </string-array>
+ </resources>
+--- upstream/app/src/main/res/values/strings.xml
++++ vivo-alive/app/src/main/res/values/strings.xml
+@@ -1,7 +1,7 @@
+ <?xml version="1.0" encoding="utf-8"?>
+ <resources>
+-    <string name="app_name">HyperAlive</string>
+-    <string name="xposed_desc">在澎湃OS4上实现魅族alive壁纸</string>
++    <string name="app_name">vivo alive</string>
++    <string name="xposed_desc">HyperAlive 1.0.4 的 vivo / iQOO 熄屏适配测试版</string>
+     <string name="wallpaper_name">启航</string>
+     <string name="wallpaper_desc">魅族「启航」熄屏效果（圆形透镜）</string>
+     <string name="wallpaper_author">HyperAlive</string>

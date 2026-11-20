@@ -1,0 +1,10 @@
+{
+  "all_payload_entries_identical": true,
+  "payload_entries": 232,
+  "source_snapshot_files_checked": 97,
+  "policy_checks": 89,
+  "jvm_registration_checks": 32,
+  "device_tested": false,
+  "release_apk_sha256": "05bb4abfa286390e31eba5cca200243613f633b66cb19dffd6d23b51c93be0aa",
+  "selfbuilt_apk_sha256": "4fe5be47f4d48c570d31eae72b2db84f2c557a0ba5d33180cbf421bad9dc0e4d"
+}

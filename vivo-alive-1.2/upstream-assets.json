@@ -1,0 +1,1122 @@
+[
+  {
+    "path": "app/src/main/assets/bubble/v201.json",
+    "sha1": "7df423ca72693dddc8c3795525e28cc7c38820c9",
+    "local_match": true
+  },
+  {
+    "path": "app/src/main/assets/bubble/v201_dark.json",
+    "sha1": "7df423ca72693dddc8c3795525e28cc7c38820c9",
+    "local_match": true
+  },
+  {
+    "path": "app/src/main/assets/bubble/v202.json",
+    "sha1": "15be38ff3bf78b4fcf92a6ca5248489bfe3b4f2c",
+    "local_match": true
+  },
+  {
+    "path": "app/src/main/assets/bubble/v202_dark.json",
+    "sha1": "15be38ff3bf78b4fcf92a6ca5248489bfe3b4f2c",
+    "local_match": true
+  },
+  {
+    "path": "app/src/main/assets/bubble/v203.json",
+    "sha1": "00779023ffde1a4a7cf6b4d50abcef6d5fdcd02a",
+    "local_match": true
+  },
+  {
+    "path": "app/src/main/assets/bubble/v203_dark.json",
+    "sha1": "00779023ffde1a4a7cf6b4d50abcef6d5fdcd02a",
+    "local_match": true
+  },
+  {
+    "path": "app/src/main/assets/bubble/v204.json",
+    "sha1": "ac0394f649d1e717a2eca0a0ea55ffd55fb925de",
+    "local_match": true
+  },
+  {
+    "path": "app/src/main/assets/bubble/v204_dark.json",
+    "sha1": "ac0394f649d1e717a2eca0a0ea55ffd55fb925de",
+    "local_match": true
+  },
+  {
+    "path": "app/src/main/assets/bubble/v205.json",
+    "sha1": "c585618407de3d89cb29a4b827f70675537cf80d",
+    "local_match": true
+  },
+  {
+    "path": "app/src/main/assets/bubble/v205_dark.json",
+    "sha1": "c585618407de3d89cb29a4b827f70675537cf80d",
+    "local_match": true
+  },
+  {
+    "path": "app/src/main/assets/cosmic/phoenix.bin",
+    "sha1": "380f7777ada42ad7226f2c1dfa6a6cfb139b6abb",
+    "local_match": true
+  },
+  {
+    "path": "app/src/main/assets/cosmic/sphere.bin",
+    "sha1": "3e6a632e63f279e1dd412258a344641aba0d0a41",
+    "local_match": true
+  },
+  {
+    "path": "app/src/main/assets/cosmic/v1.json",
+    "sha1": "32bad99da6ac6d16a3db795e33dfeb59d7906ce7",
+    "local_match": true
+  },
+  {
+    "path": "app/src/main/assets/cosmic/v10.json",
+    "sha1": "6727755abd0eff413194ace38d0d39c433b81cfe",
+    "local_match": true
+  },
+  {
+    "path": "app/src/main/assets/cosmic/v101.json",
+    "sha1": "3a031205e6ef1d49c6586850d02dfc0bff4adc1b",
+    "local_match": true
+  },
+  {
+    "path": "app/src/main/assets/cosmic/v101_dark.json",
+    "sha1": "2db79554d66a5c377a944ef78d5820a442b12b3a",
+    "local_match": true
+  },
+  {
+    "path": "app/src/main/assets/cosmic/v102.json",
+    "sha1": "4b12c200f1b4ac8ec6a602cd0b86bf5da321eede",
+    "local_match": true
+  },
+  {
+    "path": "app/src/main/assets/cosmic/v102_dark.json",
+    "sha1": "e754fa13b291f8a89bcc69056c470e54e6b49f6e",
+    "local_match": true
+  },
+  {
+    "path": "app/src/main/assets/cosmic/v103.json",
+    "sha1": "24108b9d1f6d39b4b33677e54d968d675407c791",
+    "local_match": true
+  },
+  {
+    "path": "app/src/main/assets/cosmic/v103_dark.json",
+    "sha1": "ceda34d6a0380b66f33415a685ecb2aa18bb8cff",
+    "local_match": true
+  },
+  {
+    "path": "app/src/main/assets/cosmic/v104.json",
+    "sha1": "ef0a16fb668da9e6fb4e0ddead2205df94bfa371",
+    "local_match": true
+  },
+  {
+    "path": "app/src/main/assets/cosmic/v104_dark.json",
+    "sha1": "2f45d57a42a46e12c0e5f3011b4013f678707951",
+    "local_match": true
+  },
+  {
+    "path": "app/src/main/assets/cosmic/v105.json",
+    "sha1": "0bc3d25a9f800415d18c6628b72352ce0ef2377e",
+    "local_match": true
+  },
+  {
+    "path": "app/src/main/assets/cosmic/v105_dark.json",
+    "sha1": "0b458796f84bc748f78b8f5da7343c3135cba055",
+    "local_match": true
+  },
+  {
+    "path": "app/src/main/assets/cosmic/v10_dark.json",
+    "sha1": "a2076e21582925c741235a7df129a93f42f304e0",
+    "local_match": true
+  },
+  {
+    "path": "app/src/main/assets/cosmic/v11.json",
+    "sha1": "2d7708397d2d60877312352dfce81fbdeb6f829b",
+    "local_match": true
+  },
+  {
+    "path": "app/src/main/assets/cosmic/v11_dark.json",
+    "sha1": "6b9ff68d4c7c7246bb4a2d772817f437a0f0c24d",
+    "local_match": true
+  },
+  {
+    "path": "app/src/main/assets/cosmic/v12.json",
+    "sha1": "aa4532470c93412b6d4117977604d16859e97cac",
+    "local_match": true
+  },
+  {
+    "path": "app/src/main/assets/cosmic/v12_dark.json",
+    "sha1": "11b0359d16c53ea1e2bc853412f7a36472781f60",
+    "local_match": true
+  },
+  {
+    "path": "app/src/main/assets/cosmic/v13.json",
+    "sha1": "d69d40e03bdc1a343ccc66e997c6070c47c6390c",
+    "local_match": true
+  },
+  {
+    "path": "app/src/main/assets/cosmic/v13_dark.json",
+    "sha1": "a39cedd1da9586f464a1196098f5859268b4b088",
+    "local_match": true
+  },
+  {
+    "path": "app/src/main/assets/cosmic/v14.json",
+    "sha1": "735884d4b8813ed531bd16ac30721cae0a9bb957",
+    "local_match": true
+  },
+  {
+    "path": "app/src/main/assets/cosmic/v14_dark.json",
+    "sha1": "61825ec80df027ae2e1d31570bb0b92e63d1fbae",
+    "local_match": true
+  },
+  {
+    "path": "app/src/main/assets/cosmic/v15.json",
+    "sha1": "4e785ae3eeab175be322c3390dd8ea9ab1d160f4",
+    "local_match": true
+  },
+  {
+    "path": "app/src/main/assets/cosmic/v15_dark.json",
+    "sha1": "2cb9cb27dd6e8af8a87fb605892aed92fccd34cf",
+    "local_match": true
+  },
+  {
+    "path": "app/src/main/assets/cosmic/v16.json",
+    "sha1": "a0484885c9dbf61447f23f4e6b7b11b1234d62e9",
+    "local_match": true
+  },
+  {
+    "path": "app/src/main/assets/cosmic/v16_dark.json",
+    "sha1": "1013349e67a81da7aabf73c558f765b5e7d86bc0",
+    "local_match": true
+  },
+  {
+    "path": "app/src/main/assets/cosmic/v17.json",
+    "sha1": "558f40a2f3d0beff9193dcc83703580ac8402c21",
+    "local_match": true
+  },
+  {
+    "path": "app/src/main/assets/cosmic/v17_dark.json",
+    "sha1": "9aad545da1771262a5efc65b9a3d584a7ce1b775",
+    "local_match": true
+  },
+  {
+    "path": "app/src/main/assets/cosmic/v18.json",
+    "sha1": "f803e5bd01abb608836d930ec05a393714743f4f",
+    "local_match": true
+  },
+  {
+    "path": "app/src/main/assets/cosmic/v18_dark.json",
+    "sha1": "0ba8b3909edced8e20da900fdbe042c4bee07e6c",
+    "local_match": true
+  },
+  {
+    "path": "app/src/main/assets/cosmic/v19.json",
+    "sha1": "4fa462ac6aa1f973ecc1a6b3f931dac414af868a",
+    "local_match": true
+  },
+  {
+    "path": "app/src/main/assets/cosmic/v19_dark.json",
+    "sha1": "7b62a4a04d7909bb60f523c46d32f56e4eace783",
+    "local_match": true
+  },
+  {
+    "path": "app/src/main/assets/cosmic/v1_dark.json",
+    "sha1": "fe4201533edb641430630c2616ecaa84f7287bcf",
+    "local_match": true
+  },
+  {
+    "path": "app/src/main/assets/cosmic/v3.json",
+    "sha1": "153108d3213b0ebaca6d368a9d9fa79a889a33c3",
+    "local_match": true
+  },
+  {
+    "path": "app/src/main/assets/cosmic/v3_dark.json",
+    "sha1": "da9f5710fe21147b0338284775071aface1ddb05",
+    "local_match": true
+  },
+  {
+    "path": "app/src/main/assets/cosmic/v4.json",
+    "sha1": "7bc1236f950a31218b3ce5243ca9b382ea705bb7",
+    "local_match": true
+  },
+  {
+    "path": "app/src/main/assets/cosmic/v4_dark.json",
+    "sha1": "123522119fccd8300f448a44d0cf2a0ee2eb8e8e",
+    "local_match": true
+  },
+  {
+    "path": "app/src/main/assets/cosmic/v6.json",
+    "sha1": "deb7fbb33a8cb3fb3fe2787d31083debb2033a20",
+    "local_match": true
+  },
+  {
+    "path": "app/src/main/assets/cosmic/v6_dark.json",
+    "sha1": "a9da5402358e64b7c3841c24d5f433153a7b2f61",
+    "local_match": true
+  },
+  {
+    "path": "app/src/main/assets/cosmic/v7.json",
+    "sha1": "c13fc163d8acf919f51371767c2b0715161bbd48",
+    "local_match": true
+  },
+  {
+    "path": "app/src/main/assets/cosmic/v7_dark.json",
+    "sha1": "d34553831681f031a980d6a468ae87931333bdff",
+    "local_match": true
+  },
+  {
+    "path": "app/src/main/assets/cosmic/v8.json",
+    "sha1": "607046d47d4c169683b76a36b8b1078016380ae4",
+    "local_match": true
+  },
+  {
+    "path": "app/src/main/assets/cosmic/v8_dark.json",
+    "sha1": "daf596d7e0fa64edb3fc1c9d621e890cf38e4406",
+    "local_match": true
+  },
+  {
+    "path": "app/src/main/assets/cosmic/v9.json",
+    "sha1": "1436f259f4e1e67698236a881d93d51768cd551c",
+    "local_match": true
+  },
+  {
+    "path": "app/src/main/assets/cosmic/v9_dark.json",
+    "sha1": "7b6ef7eafef2cb13d5849a8ccd3de31fadca1579",
+    "local_match": true
+  },
+  {
+    "path": "app/src/main/assets/flyme-video/dark_utlis.glsl",
+    "sha1": "5f44b72bf221964ceecf5fb72e877d25083b6a9a",
+    "local_match": true
+  },
+  {
+    "path": "app/src/main/assets/flyme-video/langliu.png",
+    "sha1": "6cbf2a474ef7c416d6ddeb12f53974e7f965e3f1",
+    "local_match": true
+  },
+  {
+    "path": "app/src/main/assets/flyme-video/lianyi.png",
+    "sha1": "cbdd252e816788922f3827ba63eb26d235d7980d",
+    "local_match": true
+  },
+  {
+    "path": "app/src/main/assets/flyme-video/mz_video_wallpaper_v1_1080.mp4",
+    "sha1": "c57b54d0340c06dd966ebd6c0191e85e98f648bf",
+    "local_match": true
+  },
+  {
+    "path": "app/src/main/assets/flyme-video/mz_video_wallpaper_v2_1080.mp4",
+    "sha1": "c46b3034fde60625513b971406ae96a72461b511",
+    "local_match": true
+  },
+  {
+    "path": "app/src/main/assets/flyme-video/mz_video_wallpaper_v3_1080.mp4",
+    "sha1": "664d332565290c1322dd1394d9c4a5984692be75",
+    "local_match": true
+  },
+  {
+    "path": "app/src/main/assets/flyme-video/shenqian.png",
+    "sha1": "334079ad6bac1274cfd08c3659d6ffc42a47742f",
+    "local_match": true
+  },
+  {
+    "path": "app/src/main/assets/flyme-video/thumbnail_runtime_frag.glsl",
+    "sha1": "91ae5a6584711c9f04227b0e0e3820a53f12a107",
+    "local_match": true
+  },
+  {
+    "path": "app/src/main/assets/flyme-video/video_runtime_frag.glsl",
+    "sha1": "4de4e01b35d78696845737b0f59dd3bf6b789094",
+    "local_match": true
+  },
+  {
+    "path": "app/src/main/assets/flyme-video/video_vertex.glsl",
+    "sha1": "fd538a4eed3ae3af04c068811c92d382d15fea5c",
+    "local_match": true
+  },
+  {
+    "path": "app/src/main/assets/fonts/DMSerifDisplay-Regular.ttf",
+    "sha1": "e56245463897ebf606598cc0e750b54e79bfd87d",
+    "local_match": true
+  },
+  {
+    "path": "app/src/main/assets/fonts/FlymeNumber-VF.ttf",
+    "sha1": "50c85decaf970b407f69579e4c3d5e3697e5469e",
+    "local_match": true
+  },
+  {
+    "path": "app/src/main/assets/fonts/SFPRO-SemiCondensedBold.otf",
+    "sha1": "206845297287692dd659e3795fb89a9e9de4593a",
+    "local_match": true
+  },
+  {
+    "path": "app/src/main/assets/fonts/SFPRO-SemiCondensedLight.otf",
+    "sha1": "18c468c54f4d6bd7ceca5a41cf311a6538309d6d",
+    "local_match": true
+  },
+  {
+    "path": "app/src/main/assets/fonts/SFPRO-SemiCondensedMedium.otf",
+    "sha1": "bb86ca51f3b83755771818f7527863a7aed6993f",
+    "local_match": true
+  },
+  {
+    "path": "app/src/main/assets/fonts/SixCaps-Regular.ttf",
+    "sha1": "f967ae940b51a892a5c192ace8a2bc3a28f17f14",
+    "local_match": true
+  },
+  {
+    "path": "app/src/main/assets/gradient/catalog.json",
+    "sha1": "8cbffba4efcbcf830abc02a671f5c7e149ab7cd6",
+    "local_match": false
+  },
+  {
+    "path": "app/src/main/assets/gradient/damos.json",
+    "sha1": "4ecc7749e889d6c8815ef7f9e1a5dad0d8e8b012",
+    "local_match": false
+  },
+  {
+    "path": "app/src/main/assets/gradient/jiguang.json",
+    "sha1": "d3905bcdda629674fafc35d6e1eda59c697ee6df",
+    "local_match": false
+  },
+  {
+    "path": "app/src/main/assets/gradient/source.json",
+    "sha1": "b74075e5460acb21a161ba4215276d7b50136825",
+    "local_match": false
+  },
+  {
+    "path": "app/src/main/assets/gradient/yuanhai.json",
+    "sha1": "0b041dd6b74f483a06f495be9176cd9d160fa8d6",
+    "local_match": false
+  },
+  {
+    "path": "app/src/main/assets/masks/leave_light/000.rgbz",
+    "sha1": "5445c17bb3e684e7928689d8aa2c73450ce510eb",
+    "local_match": true
+  },
+  {
+    "path": "app/src/main/assets/masks/leave_light/001.rgbz",
+    "sha1": "d0f2929b612df7ec0236f8d093df8a5dbff03603",
+    "local_match": true
+  },
+  {
+    "path": "app/src/main/assets/masks/leave_light/002.rgbz",
+    "sha1": "dc58e3c248eb7fc39c700f62b435130e86d78642",
+    "local_match": true
+  },
+  {
+    "path": "app/src/main/assets/masks/leave_light/003.rgbz",
+    "sha1": "7429a249d746bb8e78d48654e1d2e1164d257669",
+    "local_match": true
+  },
+  {
+    "path": "app/src/main/assets/masks/leave_light/004.rgbz",
+    "sha1": "cd420b7fdee518ec3bef5258f63a073aee357b9f",
+    "local_match": true
+  },
+  {
+    "path": "app/src/main/assets/masks/leave_light/005.rgbz",
+    "sha1": "f4be896e8fa9220bcb4a2ad26f05596681628f98",
+    "local_match": true
+  },
+  {
+    "path": "app/src/main/assets/masks/leave_light/006.rgbz",
+    "sha1": "cf21b5194d6836a287e75c71cca034fbd9776eaa",
+    "local_match": true
+  },
+  {
+    "path": "app/src/main/assets/masks/leave_light/007.rgbz",
+    "sha1": "eb32bba2701134cdbd7908a791a6ddf00a381102",
+    "local_match": true
+  },
+  {
+    "path": "app/src/main/assets/masks/leave_light/008.rgbz",
+    "sha1": "0e0d02b3ae620adbfba6be3eaaf1b7aa8f1e9c58",
+    "local_match": true
+  },
+  {
+    "path": "app/src/main/assets/masks/leave_light/009.rgbz",
+    "sha1": "40c4fee462e4163f7bcd55d5370b286bec58f43b",
+    "local_match": true
+  },
+  {
+    "path": "app/src/main/assets/masks/leave_light/010.rgbz",
+    "sha1": "e86585f5eab41b5c9ca38d2558a280144edf3e27",
+    "local_match": true
+  },
+  {
+    "path": "app/src/main/assets/masks/leave_light/011.rgbz",
+    "sha1": "4bb1956d4f71a0a46c57b07ec5db9d8c58c43aab",
+    "local_match": true
+  },
+  {
+    "path": "app/src/main/assets/masks/leave_light/012.rgbz",
+    "sha1": "658574fae2c43e36d0e2477bec141bdfc6f2d360",
+    "local_match": true
+  },
+  {
+    "path": "app/src/main/assets/masks/leave_light/013.rgbz",
+    "sha1": "cd45c67436270aeef9462de6c1a4cfdac799c695",
+    "local_match": true
+  },
+  {
+    "path": "app/src/main/assets/masks/leave_light/014.rgbz",
+    "sha1": "e45087b964c0321dea3bcf4b5453934d7f81f5ef",
+    "local_match": true
+  },
+  {
+    "path": "app/src/main/assets/masks/leave_light/015.rgbz",
+    "sha1": "3d41b1e0601b0af44fe9616a561adfbb82d76f88",
+    "local_match": true
+  },
+  {
+    "path": "app/src/main/assets/masks/leave_light/016.rgbz",
+    "sha1": "9a1293f29177c26c2be08994f90a991b7fd7b6ce",
+    "local_match": true
+  },
+  {
+    "path": "app/src/main/assets/masks/leave_light/017.rgbz",
+    "sha1": "cff95a2023f10032d35ebbe6b61d7bd4d60a8393",
+    "local_match": true
+  },
+  {
+    "path": "app/src/main/assets/masks/leave_light/018.rgbz",
+    "sha1": "35e6a223409fd748e5c2309da00ea0ad0718667f",
+    "local_match": true
+  },
+  {
+    "path": "app/src/main/assets/masks/leave_light/019.rgbz",
+    "sha1": "120ced786469cdf4c40f530ebbe1f4d873ca1b80",
+    "local_match": true
+  },
+  {
+    "path": "app/src/main/assets/masks/leave_light/020.rgbz",
+    "sha1": "062a90a93b6457fb29b75f2cda688446e6f2bd86",
+    "local_match": true
+  },
+  {
+    "path": "app/src/main/assets/masks/leave_light/021.rgbz",
+    "sha1": "ba021fde0dcde0d99a27c98645221047c48ad3e4",
+    "local_match": true
+  },
+  {
+    "path": "app/src/main/assets/masks/leave_light/022.rgbz",
+    "sha1": "29a02bcc2411eabfd67c07aa7bef33e0111e85b0",
+    "local_match": true
+  },
+  {
+    "path": "app/src/main/assets/masks/leave_light/023.rgbz",
+    "sha1": "a7c0a8f1544f139b11297d5cb04d3425d54bb2ff",
+    "local_match": true
+  },
+  {
+    "path": "app/src/main/assets/masks/leave_light/024.rgbz",
+    "sha1": "bb17d0ad9e17261f1cf8134a5b8f6724eb53e191",
+    "local_match": true
+  },
+  {
+    "path": "app/src/main/assets/masks/leave_light/025.rgbz",
+    "sha1": "0beda0b41b3b7cae4708f2a43b18b18e7d338e7d",
+    "local_match": true
+  },
+  {
+    "path": "app/src/main/assets/masks/leave_light/026.rgbz",
+    "sha1": "bda22e9abe04dd9ca4ea52dffc5a0896f0ab0034",
+    "local_match": true
+  },
+  {
+    "path": "app/src/main/assets/masks/leave_light/027.rgbz",
+    "sha1": "e7b1cfc5a0b74654f9293271817c309f0440d162",
+    "local_match": true
+  },
+  {
+    "path": "app/src/main/assets/masks/leave_light/028.rgbz",
+    "sha1": "18f6c963d2e0436afc1f1b0e8c95e522085e3b2a",
+    "local_match": true
+  },
+  {
+    "path": "app/src/main/assets/masks/leave_light/029.rgbz",
+    "sha1": "cd4724aea7d9f99b8babfbcf71416e182c66144b",
+    "local_match": true
+  },
+  {
+    "path": "app/src/main/assets/masks/leave_light/030.rgbz",
+    "sha1": "54260b1d936f4d126c62cf851f7d356f93d91bf5",
+    "local_match": true
+  },
+  {
+    "path": "app/src/main/assets/masks/leave_light/031.rgbz",
+    "sha1": "0cf8af57c6e1d0087ae1dfbab83c59bf1c968d32",
+    "local_match": true
+  },
+  {
+    "path": "app/src/main/assets/masks/leave_light/032.rgbz",
+    "sha1": "5b6c2bb449339edca29a8c72a479305981d4cc67",
+    "local_match": true
+  },
+  {
+    "path": "app/src/main/assets/masks/leave_light/033.rgbz",
+    "sha1": "a657abf06e4ea4f18c9dab5dbbeb7f600cfac641",
+    "local_match": true
+  },
+  {
+    "path": "app/src/main/assets/masks/leave_light/034.rgbz",
+    "sha1": "02f1cad0d49a46cdc2224d4c9001416661b700bb",
+    "local_match": true
+  },
+  {
+    "path": "app/src/main/assets/masks/leave_light/035.rgbz",
+    "sha1": "74b2af2195a7d1ebc15096df035a61defbbb8b21",
+    "local_match": true
+  },
+  {
+    "path": "app/src/main/assets/masks/leave_light/036.rgbz",
+    "sha1": "3767f7f22090cdf83c57a0ab94bc29f2316c93a3",
+    "local_match": true
+  },
+  {
+    "path": "app/src/main/assets/masks/leave_light/037.rgbz",
+    "sha1": "5c480265e4fa203e73e16805bf6e8fa107cbe53b",
+    "local_match": true
+  },
+  {
+    "path": "app/src/main/assets/masks/leave_light/038.rgbz",
+    "sha1": "4a3744f81d2e78a8a5356bae730bfafed7e16146",
+    "local_match": true
+  },
+  {
+    "path": "app/src/main/assets/masks/leave_light/039.rgbz",
+    "sha1": "37d095c6583148aea6c965e062c3b1625e53a7d9",
+    "local_match": true
+  },
+  {
+    "path": "app/src/main/assets/masks/leave_light/040.rgbz",
+    "sha1": "fa9893e22b649ff865ed7a54c449ee8723bb90f7",
+    "local_match": true
+  },
+  {
+    "path": "app/src/main/assets/masks/leave_light/041.rgbz",
+    "sha1": "7e64ab422f9cc1377e7db1348922a2d76ec8bbed",
+    "local_match": true
+  },
+  {
+    "path": "app/src/main/assets/masks/leave_light/042.rgbz",
+    "sha1": "e0587f241f1f585e4b3ce4de314217c1782a22bb",
+    "local_match": true
+  },
+  {
+    "path": "app/src/main/assets/masks/leave_light/043.rgbz",
+    "sha1": "e8e1d7e8236a6354ed8304e0fbf6113d848fe085",
+    "local_match": true
+  },
+  {
+    "path": "app/src/main/assets/masks/leave_light/044.rgbz",
+    "sha1": "f965ceb7577f5b4f692de79fb60a2b45e599cb29",
+    "local_match": true
+  },
+  {
+    "path": "app/src/main/assets/masks/leave_light/045.rgbz",
+    "sha1": "02334bf0062707ede55a151d920d75d1fd5a45cc",
+    "local_match": true
+  },
+  {
+    "path": "app/src/main/assets/masks/leave_light/046.rgbz",
+    "sha1": "ca9dad2b8e2647dddd2bd3521772a1ef1b4eb62a",
+    "local_match": true
+  },
+  {
+    "path": "app/src/main/assets/masks/leave_light/047.rgbz",
+    "sha1": "9451226e35b03f6572612d75f060b62c7ae6705b",
+    "local_match": true
+  },
+  {
+    "path": "app/src/main/assets/masks/leave_light/048.rgbz",
+    "sha1": "26cb8185f88373a7693531167d5a3c0be29727d2",
+    "local_match": true
+  },
+  {
+    "path": "app/src/main/assets/masks/leave_light/049.rgbz",
+    "sha1": "48c8120fc23097865de6a1765340a30911f5edec",
+    "local_match": true
+  },
+  {
+    "path": "app/src/main/assets/masks/leave_light/050.rgbz",
+    "sha1": "7eed5953a7f7bf33db7b37ab2f75dd246d6fcede",
+    "local_match": true
+  },
+  {
+    "path": "app/src/main/assets/masks/leave_light/051.rgbz",
+    "sha1": "22c4e0915e151fafbfd5e148a76348855a1af421",
+    "local_match": true
+  },
+  {
+    "path": "app/src/main/assets/masks/leave_light/052.rgbz",
+    "sha1": "89d55e9a199ed3a8e4d883cfd1568febcc293ada",
+    "local_match": true
+  },
+  {
+    "path": "app/src/main/assets/masks/leave_light/053.rgbz",
+    "sha1": "a4b262012f1045c4791ef7a0b165de14ffa42799",
+    "local_match": true
+  },
+  {
+    "path": "app/src/main/assets/masks/leave_light/054.rgbz",
+    "sha1": "7632a5fe35b2670009ce58c60fc697223a650f59",
+    "local_match": true
+  },
+  {
+    "path": "app/src/main/assets/masks/leave_light/055.rgbz",
+    "sha1": "9904f586633a820f1c68acdb5a1c04961cbd7a7c",
+    "local_match": true
+  },
+  {
+    "path": "app/src/main/assets/masks/leave_light/056.rgbz",
+    "sha1": "b8c714b63e58fe1d7d607c965548711f84d1f696",
+    "local_match": true
+  },
+  {
+    "path": "app/src/main/assets/masks/leave_light/057.rgbz",
+    "sha1": "42e7b4988a1214c9dbe6a9a9b9b93907dada107e",
+    "local_match": true
+  },
+  {
+    "path": "app/src/main/assets/masks/leave_light/058.rgbz",
+    "sha1": "42e7b4988a1214c9dbe6a9a9b9b93907dada107e",
+    "local_match": true
+  },
+  {
+    "path": "app/src/main/assets/masks/leave_light/059.rgbz",
+    "sha1": "42e7b4988a1214c9dbe6a9a9b9b93907dada107e",
+    "local_match": true
+  },
+  {
+    "path": "app/src/main/assets/masks/leave_light/060.rgbz",
+    "sha1": "42e7b4988a1214c9dbe6a9a9b9b93907dada107e",
+    "local_match": true
+  },
+  {
+    "path": "app/src/main/assets/masks/leave_light/end.rgbz",
+    "sha1": "e00898df6ad297a8d4b105ca394e625f603c3139",
+    "local_match": true
+  },
+  {
+    "path": "app/src/main/assets/masks/leave_light/manifest.json",
+    "sha1": "dde6d8abd51f1da0e183192ed4b5b399545b72a1",
+    "local_match": false
+  },
+  {
+    "path": "app/src/main/assets/masks/leave_light/start.rgbz",
+    "sha1": "a637207b1b123b5a34069dd34d7a529027c680e3",
+    "local_match": true
+  },
+  {
+    "path": "app/src/main/assets/masks/moon/000.rgbz",
+    "sha1": "6a89141e7e2c00ef641bcadb8cff25cf2ca79295",
+    "local_match": true
+  },
+  {
+    "path": "app/src/main/assets/masks/moon/001.rgbz",
+    "sha1": "071bb592b6ddc037057871007af0a1bcba6edbc9",
+    "local_match": true
+  },
+  {
+    "path": "app/src/main/assets/masks/moon/002.rgbz",
+    "sha1": "21e7f914e85144ba156d45999c6f7f47b72e088a",
+    "local_match": true
+  },
+  {
+    "path": "app/src/main/assets/masks/moon/003.rgbz",
+    "sha1": "4ca1ef5f284adf66f9a4f7fcbb263acd67258657",
+    "local_match": true
+  },
+  {
+    "path": "app/src/main/assets/masks/moon/004.rgbz",
+    "sha1": "681b433b6dbc29509f703250e9ca96909e70c156",
+    "local_match": true
+  },
+  {
+    "path": "app/src/main/assets/masks/moon/005.rgbz",
+    "sha1": "4992644c6750acbe4fe41715dc5bb3edda0b875f",
+    "local_match": true
+  },
+  {
+    "path": "app/src/main/assets/masks/moon/006.rgbz",
+    "sha1": "70df88226722a5b021657705dcc75454ddaf1876",
+    "local_match": true
+  },
+  {
+    "path": "app/src/main/assets/masks/moon/007.rgbz",
+    "sha1": "77943b2579a9e0e575767d08837bff7753a64f24",
+    "local_match": true
+  },
+  {
+    "path": "app/src/main/assets/masks/moon/008.rgbz",
+    "sha1": "903ddf45dec402280eec8ba1076a89f464558488",
+    "local_match": true
+  },
+  {
+    "path": "app/src/main/assets/masks/moon/009.rgbz",
+    "sha1": "223cea69202b9b0d1bdb03e7f0256a2dc6b2cd88",
+    "local_match": true
+  },
+  {
+    "path": "app/src/main/assets/masks/moon/010.rgbz",
+    "sha1": "5d9103546194ef01cdf89c1227844166d1909142",
+    "local_match": true
+  },
+  {
+    "path": "app/src/main/assets/masks/moon/011.rgbz",
+    "sha1": "0019fe223ac4b2e3a767a6ec78aae5abdabdee45",
+    "local_match": true
+  },
+  {
+    "path": "app/src/main/assets/masks/moon/012.rgbz",
+    "sha1": "8bea84e2a1eb934cf74b86fad9976dcff7b089b1",
+    "local_match": true
+  },
+  {
+    "path": "app/src/main/assets/masks/moon/013.rgbz",
+    "sha1": "db3a10ee7f9e7897e81ce356d072806c5d291429",
+    "local_match": true
+  },
+  {
+    "path": "app/src/main/assets/masks/moon/014.rgbz",
+    "sha1": "22d08e09b944b95fd5f95ee7c97d26d258e15b11",
+    "local_match": true
+  },
+  {
+    "path": "app/src/main/assets/masks/moon/015.rgbz",
+    "sha1": "7345902227fffdfc878367238e063f79a4152c22",
+    "local_match": true
+  },
+  {
+    "path": "app/src/main/assets/masks/moon/016.rgbz",
+    "sha1": "f6536be7d2d3f92b4ecfb190fbcccbd67ad05dfd",
+    "local_match": true
+  },
+  {
+    "path": "app/src/main/assets/masks/moon/017.rgbz",
+    "sha1": "03c684d0f4f6b7d74cf9c71057356a8648829fa1",
+    "local_match": true
+  },
+  {
+    "path": "app/src/main/assets/masks/moon/018.rgbz",
+    "sha1": "c1fc8393512f9de4973f08669f68917d6d3bcaa9",
+    "local_match": true
+  },
+  {
+    "path": "app/src/main/assets/masks/moon/019.rgbz",
+    "sha1": "470e20cefa95727a1eca8a335fae65aa45c38112",
+    "local_match": true
+  },
+  {
+    "path": "app/src/main/assets/masks/moon/020.rgbz",
+    "sha1": "69018753981bf3752a24b72a0f50ce546abec156",
+    "local_match": true
+  },
+  {
+    "path": "app/src/main/assets/masks/moon/021.rgbz",
+    "sha1": "4dbff69641ffd0af4d737c34c019d3b136eee379",
+    "local_match": true
+  },
+  {
+    "path": "app/src/main/assets/masks/moon/022.rgbz",
+    "sha1": "eac64761810c019d3c909e87fec71c206e8eda5e",
+    "local_match": true
+  },
+  {
+    "path": "app/src/main/assets/masks/moon/023.rgbz",
+    "sha1": "bba3f09469def24ea300f19e13bbde2869d03f30",
+    "local_match": true
+  },
+  {
+    "path": "app/src/main/assets/masks/moon/024.rgbz",
+    "sha1": "54602db2f5ead97299cd673877e207d90d5415c6",
+    "local_match": true
+  },
+  {
+    "path": "app/src/main/assets/masks/moon/025.rgbz",
+    "sha1": "62fdc9528edf5ee5713a94eefc5eed264f43b359",
+    "local_match": true
+  },
+  {
+    "path": "app/src/main/assets/masks/moon/026.rgbz",
+    "sha1": "2770b4ee38d17bf958a8a5a16fafa625470b2b57",
+    "local_match": true
+  },
+  {
+    "path": "app/src/main/assets/masks/moon/027.rgbz",
+    "sha1": "5efab118d94ca6e73fa03551775f0943a741c4f3",
+    "local_match": true
+  },
+  {
+    "path": "app/src/main/assets/masks/moon/028.rgbz",
+    "sha1": "602b6c25967e03911d12f8705d5356fbe0047899",
+    "local_match": true
+  },
+  {
+    "path": "app/src/main/assets/masks/moon/029.rgbz",
+    "sha1": "cd77b6a550e0c04e01fc05543a9e2e673214a5ac",
+    "local_match": true
+  },
+  {
+    "path": "app/src/main/assets/masks/moon/030.rgbz",
+    "sha1": "942222889e51c47db03eeaf91daedf3e79a1d8f0",
+    "local_match": true
+  },
+  {
+    "path": "app/src/main/assets/masks/moon/031.rgbz",
+    "sha1": "c9f26c25e09a03e41624db3923acc1593c5f84d3",
+    "local_match": true
+  },
+  {
+    "path": "app/src/main/assets/masks/moon/end.rgbz",
+    "sha1": "e00898df6ad297a8d4b105ca394e625f603c3139",
+    "local_match": true
+  },
+  {
+    "path": "app/src/main/assets/masks/moon/manifest.json",
+    "sha1": "61af74084c856fc43c6d351564dad929ce6bbb4a",
+    "local_match": false
+  },
+  {
+    "path": "app/src/main/assets/masks/moon/start.rgbz",
+    "sha1": "4d9cd2d70799f4eb3e9021ac89e541e5ce3191fd",
+    "local_match": true
+  },
+  {
+    "path": "app/src/main/assets/photo/default.jpg",
+    "sha1": "f660e952141bfeebd826fd788129049f15a168f1",
+    "local_match": true
+  },
+  {
+    "path": "app/src/main/assets/preview/aod_liuguang.png",
+    "sha1": "2f6944367098632f138d208a6a8f910d203ef479",
+    "local_match": true
+  },
+  {
+    "path": "app/src/main/assets/preview/aod_moon.png",
+    "sha1": "2263644e4e2d7c20292c44f9ea3519428c902a89",
+    "local_match": true
+  },
+  {
+    "path": "app/src/main/assets/preview/aod_qihang.png",
+    "sha1": "6d3ea7c4ef72f48852dba0fe33a92a5d16b5a2b6",
+    "local_match": true
+  },
+  {
+    "path": "app/src/main/assets/preview/wp_alive_light.png",
+    "sha1": "a00504873ba76c617bf14df2a4a4fe0f77dcac3f",
+    "local_match": true
+  },
+  {
+    "path": "app/src/main/assets/shader/base/blend_utils.glsl",
+    "sha1": "96ba4fcf6148b3eab2ade14cffbf671c2049f560",
+    "local_match": true
+  },
+  {
+    "path": "app/src/main/assets/shader/base/dark_utlis.glsl",
+    "sha1": "79ddc648c415d03a6ed28a88e54be348cbad65f3",
+    "local_match": true
+  },
+  {
+    "path": "app/src/main/assets/shader/base/dithering_utils.glsl",
+    "sha1": "b7a4751f571a6e1dd8b61d47c3ea0ebaceb75df7",
+    "local_match": true
+  },
+  {
+    "path": "app/src/main/assets/shader/base/noise_2d.glsl",
+    "sha1": "5f6607a381471dc17a939a9da5531820fc234e1c",
+    "local_match": true
+  },
+  {
+    "path": "app/src/main/assets/shader/base/noise_3d.glsl",
+    "sha1": "e2b37d1abd5d223791385209aca8348f4388b8b9",
+    "local_match": true
+  },
+  {
+    "path": "app/src/main/assets/shader/base/noise_3d_classic.glsl",
+    "sha1": "976565077ab2497c5b0bab3a0604c8e525e3432b",
+    "local_match": true
+  },
+  {
+    "path": "app/src/main/assets/shader/base/noise_3d_grad.glsl",
+    "sha1": "10a522663d51cf11e873a53f049f9421dd763976",
+    "local_match": true
+  },
+  {
+    "path": "app/src/main/assets/shader/blur/down_sample_frag.glsl",
+    "sha1": "9807e30113fec221cd743dd85f9aa6656d3b0ff7",
+    "local_match": true
+  },
+  {
+    "path": "app/src/main/assets/shader/blur/down_sample_vertex.glsl",
+    "sha1": "4727d9cf30800d65cddce39d13e49a419e240b0d",
+    "local_match": true
+  },
+  {
+    "path": "app/src/main/assets/shader/blur/gaussian_frag.glsl",
+    "sha1": "d7341d6aaae5c116a99bd5c0dc9a0ba32dba324b",
+    "local_match": true
+  },
+  {
+    "path": "app/src/main/assets/shader/blur/gaussian_vertex.glsl",
+    "sha1": "6ae88f482c3918d745aa22e61147b39a81514332",
+    "local_match": true
+  },
+  {
+    "path": "app/src/main/assets/shader/blur/up_sample_frag.glsl",
+    "sha1": "994f963fe9e6fef34031629425ae91d5c6b63b5c",
+    "local_match": true
+  },
+  {
+    "path": "app/src/main/assets/shader/blur/up_sample_vertex.glsl",
+    "sha1": "15d705e4bf847ff10fc72a99cdaf51adcc1b9390",
+    "local_match": true
+  },
+  {
+    "path": "app/src/main/assets/shader/bubble/bubble_frag.glsl",
+    "sha1": "b120c26b721bcb1c288b271413b40f702bf3e516",
+    "local_match": true
+  },
+  {
+    "path": "app/src/main/assets/shader/bubble/bubble_vertex.glsl",
+    "sha1": "2fa5d0db4b91ff593931c9bdd7e1db08ae833a01",
+    "local_match": true
+  },
+  {
+    "path": "app/src/main/assets/shader/cosmic/cosmic_frag.glsl",
+    "sha1": "076357ad8906c62cdf12e5db8094544aada01a47",
+    "local_match": true
+  },
+  {
+    "path": "app/src/main/assets/shader/cosmic/cosmic_utils.glsl",
+    "sha1": "e963be78aceb17fd3da6bc6ce979702f0af5ab16",
+    "local_match": true
+  },
+  {
+    "path": "app/src/main/assets/shader/cosmic/cosmic_vertex.glsl",
+    "sha1": "6d7ee8448ea628edae545d9cca167379f14a0636",
+    "local_match": true
+  },
+  {
+    "path": "app/src/main/assets/shader/cosmic/gradient_background_frag.glsl",
+    "sha1": "0ffe146332d5ba4a9246b3907e8e2c0f1ac367d7",
+    "local_match": true
+  },
+  {
+    "path": "app/src/main/assets/shader/cosmic/gradient_background_vertex.glsl",
+    "sha1": "93e55eb88c3aeb68f3eac762e5e9f41dbb47bf16",
+    "local_match": true
+  },
+  {
+    "path": "app/src/main/assets/shader/gradient/gradient.frag",
+    "sha1": "2a58c34011a3f1c313cf7bd8704297488612411d",
+    "local_match": true
+  },
+  {
+    "path": "app/src/main/assets/shader/gradient/gradient.vert",
+    "sha1": "6d4007afa3f1b34bdc253411f5c7fdd3d5de8e15",
+    "local_match": true
+  },
+  {
+    "path": "app/src/main/assets/shader/lens/lens_blend_frag.glsl",
+    "sha1": "af026435e9cc41a13b266c313c545d7e00a505fc",
+    "local_match": true
+  },
+  {
+    "path": "app/src/main/assets/shader/lens/lens_blend_vertex.glsl",
+    "sha1": "62c2978248f58de5ea94922b345c3c1c02dd8f77",
+    "local_match": true
+  },
+  {
+    "path": "app/src/main/assets/shader/lens/lens_decorator.png",
+    "sha1": "605e4d65cd6715694bd93752b4ea090c2a4ba1aa",
+    "local_match": true
+  },
+  {
+    "path": "app/src/main/assets/shader/lens/lens_photo_frag.glsl",
+    "sha1": "1f090f57c47bfe3d77b278fe4f143a9f9283d7bd",
+    "local_match": true
+  },
+  {
+    "path": "app/src/main/assets/shader/lens/lens_photo_vertex.glsl",
+    "sha1": "ad4902e98adc380fa268291ea4c1c96880174d22",
+    "local_match": true
+  },
+  {
+    "path": "app/src/main/assets/shader/phoenix/Noise6.png",
+    "sha1": "fdda22582f8044d161270e4152f9ff2c8f529237",
+    "local_match": true
+  },
+  {
+    "path": "app/src/main/assets/shader/phoenix/cosmicPhoenix_frag.glsl",
+    "sha1": "f6d07f4866e83d9660d1e49aecaaa1cbe911c2ad",
+    "local_match": true
+  },
+  {
+    "path": "app/src/main/assets/shader/phoenix/cosmicPhoenix_vertex.glsl",
+    "sha1": "c48839c13cdd942c835c88d3dfcf2c24e215ddfa",
+    "local_match": true
+  },
+  {
+    "path": "app/src/main/assets/shader/utils/dark_utils.glsl",
+    "sha1": "ab2f2af9638376aa628fbe2938e08e54384a0983",
+    "local_match": true
+  },
+  {
+    "path": "app/src/main/assets/soundviz/disk.frag",
+    "sha1": "6cbf7175d5de424f371c357862e72dfe5abf1d4f",
+    "local_match": true
+  },
+  {
+    "path": "app/src/main/assets/soundviz/disk.vert",
+    "sha1": "9f160c8e578d37297b70121e71647aee260a16ad",
+    "local_match": true
+  },
+  {
+    "path": "app/src/main/assets/stereo/fragment_blur.glsl",
+    "sha1": "9593412efbed5b2642642d0ceb6c2aac73f394dd",
+    "local_match": true
+  },
+  {
+    "path": "app/src/main/assets/stereo/fragment_mixformanual.glsl",
+    "sha1": "71aed231b8471d10d30522c8031161359e1cfdbd",
+    "local_match": true
+  },
+  {
+    "path": "app/src/main/assets/stereo/mz_stereo_depth_v4.png",
+    "sha1": "6664e7d87db852b5aa2cfcb5357b592ddf40658e",
+    "local_match": true
+  },
+  {
+    "path": "app/src/main/assets/stereo/mz_stereo_depth_v5.png",
+    "sha1": "266393f5a72380014b435e8c32c5eef84864b0f3",
+    "local_match": true
+  },
+  {
+    "path": "app/src/main/assets/stereo/mz_stereo_depth_v6.png",
+    "sha1": "82585ccd1d8e496062f7dd4e65192583752e83a6",
+    "local_match": true
+  },
+  {
+    "path": "app/src/main/assets/stereo/mz_stereo_main_v4.webp",
+    "sha1": "a6b72686b03e72b994039199d22171aad9df8bd7",
+    "local_match": true
+  },
+  {
+    "path": "app/src/main/assets/stereo/mz_stereo_main_v5.webp",
+    "sha1": "dae26f000d8f37fbf3664e84fa758bba665d9798",
+    "local_match": true
+  },
+  {
+    "path": "app/src/main/assets/stereo/mz_stereo_main_v6.webp",
+    "sha1": "3eac8a807bb4226505dda6641adc61938e6c0754",
+    "local_match": true
+  },
+  {
+    "path": "app/src/main/assets/stereo/vertex.glsl",
+    "sha1": "5a1403f532fbdd6a94ce49a59979e07bc404d671",
+    "local_match": true
+  },
+  {
+    "path": "app/src/main/assets/stereo/vertex_split.glsl",
+    "sha1": "4131ccdb9405cee8c919b58c97b5c1f66d7f3c58",
+    "local_match": true
+  }
+]
